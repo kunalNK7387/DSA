@@ -13,6 +13,9 @@ public class ArrayDequeBasic {
 
         System.out.println(q);
 
+        q.pollLast();
+        System.out.println(q);
+
     }
 
 
