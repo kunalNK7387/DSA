@@ -6,11 +6,11 @@ public class QueueBasic {
 
     public static void main(String[] args){
         Queue<Integer> q =new LinkedList<>();
-        q.add(10);
-        q.add(20);
-        q.add(30);
-        q.add(40);
-        q.add(50);
+        q.offer(10); // in add we need to handele the error by useing exception handling instid of this we use offer
+        q.offer(20);
+        q.offer(30);
+        q.offer(40);
+        q.offer(50);
 
 
     }
