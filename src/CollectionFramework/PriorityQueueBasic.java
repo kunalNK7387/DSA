@@ -6,7 +6,11 @@ import java.util.Queue;
 public class PriorityQueueBasic {
     static void main(String[] args) {
         Queue<Integer> pq=new PriorityQueue<>();
-        //default behaviour -> Integer -> less value -> high Priority
+        //default behaviour -> Integer -> less value -> high Priority->minHeap
+
+        //maxHeap ->Integer -> High Value -> high Priority
+
+        //pq -> String -> Comparator
 
         pq.offer(40);
         pq.offer(30);
