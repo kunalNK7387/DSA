@@ -11,7 +11,14 @@ public class QueueBasic {
         q.offer(30);
         q.offer(40);
         q.offer(50);
+        q.peek();
 
+
+        System.out.println(q);
+
+        System.out.println(q.poll());
+
+        System.out.println(q);
 
     }
 }
