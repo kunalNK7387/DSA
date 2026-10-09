@@ -10,5 +10,10 @@ public class StackBasic {
         stack.push(20);
         stack.push(30);
         System.out.println(stack);
+
+        stack.pop();
+        System.out.println(stack);
+
+        System.out.println(stack.peek());
     }
 }
