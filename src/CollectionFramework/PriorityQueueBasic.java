@@ -13,8 +13,11 @@ public class PriorityQueueBasic {
         pq.offer(20);
         pq.offer(10);
 
+        System.out.println(pq);
         System.out.println(pq.poll());
-
+        System.out.println(pq);
+        System.out.println(pq.poll());
+        System.out.println(pq);
 
     }
 }
