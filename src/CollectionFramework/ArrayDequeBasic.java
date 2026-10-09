@@ -18,6 +18,8 @@ public class ArrayDequeBasic {
         q.pollFirst();
         System.out.println(q);
 
+        System.out.println(q.size());
+
     }
 
 
