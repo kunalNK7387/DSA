@@ -27,6 +27,8 @@ public class QueueBasic {
         q.offer(30);
         q.offer(40);
         q.offer(50);
+        q.addFirst(5);
+        q.addLast(6);
 
         System.out.println(q);
 
