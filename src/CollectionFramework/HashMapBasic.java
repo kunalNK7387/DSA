@@ -49,5 +49,14 @@ public class HashMapBasic {
         //get all the entries From map
         Set<Map.Entry<String,String>> entrySet=table.entrySet();
         System.out.println(entrySet);
+
+        Map<Integer,String> map=new HashMap<>();
+        map.put(1,"One");
+        map.put(2,"Two");
+        map.put(3,"three");
+
+        for(Map.Entry<Integer,String> entry: map.entrySet()){
+            System.out.println("Key: "+entry.getKey() +" Value: "+entry.getValue());
+        }
     }
 }
