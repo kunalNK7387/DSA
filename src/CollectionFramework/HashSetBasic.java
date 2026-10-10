@@ -22,7 +22,9 @@ public class HashSetBasic {
         System.out.println(set1);
         set1.retainAll(set2);
         System.out.println(set1);
+        System.out.println(set2);
 
+        System.out.println(set2.containsAll(set1));
 
 //        Set<Integer> st = new HashSet<>();
 //        st.add(10);
