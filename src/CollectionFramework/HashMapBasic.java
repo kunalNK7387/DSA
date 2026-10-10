@@ -23,7 +23,7 @@ public class HashMapBasic {
 
         //delection
 
-        table.remove("en");
+        table.remove("eg");
         System.out.println(table);
     }
 }
