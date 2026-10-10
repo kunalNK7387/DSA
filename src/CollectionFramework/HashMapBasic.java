@@ -25,5 +25,16 @@ public class HashMapBasic {
 
         table.remove("eg");
         System.out.println(table);
+
+
+        table.putIfAbsent("is","India3");
+        System.out.println(table);
+
+        System.out.println(table.getOrDefault("ss","NONE"));
+
+        System.out.println(table);
+
+        table.replace("is","Indonisitia");
+        System.out.println(table);
     }
 }
