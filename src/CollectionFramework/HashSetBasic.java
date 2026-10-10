@@ -5,6 +5,18 @@ import java.util.*;
 public class HashSetBasic {
     static void main(String[] args) {
 
+        HashSet<Student> set= new HashSet<>();
+
+        Student s1=new Student(1,"Kunal");
+        Student s2=new Student(1,"Kunal");
+        Student s3=new Student(1,"Kunal");
+
+        set.add(s1);
+        set.add(s2);
+        set.add(s3);
+
+        System.out.println(set);
+
 //        Set<Integer> set1=new HashSet<>();
 //        Set<Integer> set2=new HashSet<>();
 //
@@ -44,18 +56,18 @@ public class HashSetBasic {
         //LinkedHashedSet -> O(n)
         //TreeSet -> BST -> O(logn)
 
-        Set<Integer> st= new TreeSet<>() ;
-        st.add(40);
-        st.add(10);
-        st.add(10);
-        st.add(10);
-        st.add(10);
-        st.add(20);
-        st.add(20);
-        st.add(30);
-
-
-        System.out.println(st);
+//        Set<Integer> st= new TreeSet<>() ;
+//        st.add(40);
+//        st.add(10);
+//        st.add(10);
+//        st.add(10);
+//        st.add(10);
+//        st.add(20);
+//        st.add(20);
+//        st.add(30);
+//
+//
+//        System.out.println(st);
     }
 
 }
