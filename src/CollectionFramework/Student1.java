@@ -15,7 +15,10 @@ public class Student1 implements Comparable<Student1> {
     @Override
     public int compareTo(Student1 that) {
         // Sort students by age in ascending order
-        return Integer.compare(this.age, that.age);
+        if (this.age== that.age){
+            return this.name.compareTo(that.name);
+        };
+        return Integer.compare( that.age,this.age);
     }
 
     @Override

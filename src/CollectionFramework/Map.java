@@ -2,6 +2,7 @@ package CollectionFramework;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Map {
@@ -10,12 +11,19 @@ public class Map {
         List<Student1> students=new ArrayList<>();
         students.add(new Student1(19,"Om",50));
         students.add(new Student1(23,"Kunal",45));
-        students.add(new Student1(22,"Anij",70));
+        students.add(new Student1(23,"Anij",70));
         students.add(new Student1(7,"Soham",60));
 
         System.out.println(students);
 
-        Collections.sort(students);
+//        Collections.sort(students);
+
+        Collections.sort(students, new Comparator<Student1>() {
+            @Override
+            public int compare(Student1 student1, Student1 t1) {
+                return student1.weight-t1.weight;
+            }
+        });
         System.out.println(students);
 
 
