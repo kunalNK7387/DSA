@@ -18,12 +18,17 @@ public class Map {
 
 //        Collections.sort(students);
 
-        Collections.sort(students, new Comparator<Student1>() {
-            @Override
-            public int compare(Student1 student1, Student1 t1) {
-                return student1.weight-t1.weight;
-            }
-        });
+//        Collections.sort(students, new Comparator<Student1>() {
+//            @Override
+//            public int compare(Student1 student1, Student1 t1) {
+//                return student1.weight-t1.weight;
+//            }
+//        });
+
+//        Collections.sort(students,new WeightComparator());
+
+        Collections.sort(students,(student1, t1)-> student1.weight-t1.weight );
+
         System.out.println(students);
 
 
