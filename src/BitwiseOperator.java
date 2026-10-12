@@ -51,14 +51,20 @@ public class BitwiseOperator {
 //        }else {
 //            System.out.println("The Number is Not Power of 2");
 //        }
+//
+//        int a=5;
+//        int b=6;
+//        a=a^b;
+//        b=a^b;
+//        a=a^b;
+//
+//        System.out.println(a);
+//        System.out.println(b);
 
-        int a=5;
-        int b=6;
-        a=a^b;
-        b=a^b;
-        a=a^b;
+        //By removing the last set bit
+//        int n=10;
+//        System.out.println((n&(n-1)));
 
-        System.out.println(a);
-        System.out.println(b);
+
     }
 }
