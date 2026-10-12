@@ -66,14 +66,23 @@ public class BitwiseOperator {
 //        System.out.println((n&(n-1)));
 //        System.out.println((n& -(n)));
 
+//Find unique element (all others appear twice)
+//        int a=10;
+//        int b=20;
+//        int c=10;
+//        int d=20;
+//        int e=13;
+//
+//        int n=a^b^c^d^e;
+//        System.out.println(n);
 
-        int a=10;
-        int b=20;
-        int c=10;
-        int d=20;
-        int e=13;
+//       Check if number is power of 4
+        int n = 2;
 
-        int n=a^b^c^d^e;
-        System.out.println(n);
+        if (n > 0 && (n & (n - 1)) == 0 && (n % 3 == 1)) {
+            System.out.println("Power Of 4");
+        } else {
+            System.out.println("Not Power Of 4");
+        }
     }
 }
