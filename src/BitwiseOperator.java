@@ -30,19 +30,26 @@ public class BitwiseOperator {
 //            System.out.println("Odd" +" "+ n);
 //        }
 
-        int n=7;
-        int count=0;
-        while(n !=0){
-            if((n&1)!=0){
-                // 1 set bit milegi
-                count++;
-            }
-                //right shift to remove this bit
-                n=n>>1;
+//        int n=7;
+//        int count=0;
+//        while(n !=0){
+//            if((n&1)!=0){
+//                // 1 set bit milegi
+//                count++;
+//            }
+//                //right shift to remove this bit
+//                n=n>>1;
+//
+//
+//
+//        }
+//        System.out.println("Set bit Count: "+count  );
 
-
-
+        int n=31;
+        if((n&(n-1))==0){
+            System.out.println("The Number Is power of 2");
+        }else {
+            System.out.println("The Number is Not Power of 2");
         }
-        System.out.println("Set bit Count: "+count  );
     }
 }
