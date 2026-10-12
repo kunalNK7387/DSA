@@ -64,7 +64,16 @@ public class BitwiseOperator {
         //By removing the last set bit
 //        int n=10;
 //        System.out.println((n&(n-1)));
+//        System.out.println((n& -(n)));
 
 
+        int a=10;
+        int b=20;
+        int c=10;
+        int d=20;
+        int e=13;
+
+        int n=a^b^c^d^e;
+        System.out.println(n);
     }
 }
