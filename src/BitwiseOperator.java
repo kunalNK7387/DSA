@@ -45,11 +45,20 @@ public class BitwiseOperator {
 //        }
 //        System.out.println("Set bit Count: "+count  );
 
-        int n=31;
-        if((n&(n-1))==0){
-            System.out.println("The Number Is power of 2");
-        }else {
-            System.out.println("The Number is Not Power of 2");
-        }
+//        int n=31;
+//        if((n&(n-1))==0){
+//            System.out.println("The Number Is power of 2");
+//        }else {
+//            System.out.println("The Number is Not Power of 2");
+//        }
+
+        int a=5;
+        int b=6;
+        a=a^b;
+        b=a^b;
+        a=a^b;
+
+        System.out.println(a);
+        System.out.println(b);
     }
 }
