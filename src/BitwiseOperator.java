@@ -22,12 +22,27 @@ public class BitwiseOperator {
 //            System.out.println();
 //        }
 
-        int n=11;
-        if((n&1)==0){
-            System.out.println("Even" +" "+ n);
+//        int n=11;
+//        if((n&1)==0){
+//            System.out.println("Even" +" "+ n);
+//
+//        }else {
+//            System.out.println("Odd" +" "+ n);
+//        }
 
-        }else {
-            System.out.println("Odd" +" "+ n);
+        int n=7;
+        int count=0;
+        while(n !=0){
+            if((n&1)!=0){
+                // 1 set bit milegi
+                count++;
+            }
+                //right shift to remove this bit
+                n=n>>1;
+
+
+
         }
+        System.out.println("Set bit Count: "+count  );
     }
 }
