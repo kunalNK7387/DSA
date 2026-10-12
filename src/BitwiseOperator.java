@@ -15,11 +15,19 @@ public class BitwiseOperator {
 //            System.out.println();
 //        }
 //        int n;
-        int n=100;
-        for (int i=1;i<=10;i++){
-            n = n >> 1;
-            System.out.println(n);
-            System.out.println();
+//        int n=100;
+//        for (int i=1;i<=10;i++){
+//            n = n >> 1;
+//            System.out.println(n);
+//            System.out.println();
+//        }
+
+        int n=11;
+        if((n&1)==0){
+            System.out.println("Even" +" "+ n);
+
+        }else {
+            System.out.println("Odd" +" "+ n);
         }
     }
 }
