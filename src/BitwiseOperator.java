@@ -14,7 +14,7 @@ public class BitwiseOperator {
 //            System.out.println(n);
 //            System.out.println();
 //        }
-
+//        int n;
         int n=100;
         for (int i=1;i<=10;i++){
             n = n >> 1;
