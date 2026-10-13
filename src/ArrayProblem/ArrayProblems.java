@@ -15,17 +15,46 @@ public class ArrayProblems {
         return newArray;
     }
 
+// Liner Search
+    static boolean findTarget(int arr[],int target){
+        for (int i=0;i<arr.length;i++){
+            if(arr[i]==target){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //Maximum Number in arrray
+    static int getMaximum(int arr[]){
+        int max=arr[0];
+        for (int i=0;i< arr.length;i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+        }
+        return max;
+    }
 
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4};
+//        int[] arr = {1, 2, 3, 4};
+//
+//        int[] ans = multiplyBy10(arr);
+//
+//        System.out.println("Printing ans array:");
+//
+//        for (int i : ans) {
+//            System.out.println(i);
+//        }
 
-        int[] ans = multiplyBy10(arr);
+        //Liner Search
+//        int arr[]={1,2,3,4};
+//        boolean ans=findTarget(arr,9);
+//        System.out.println(ans);
 
-        System.out.println("Printing ans array:");
-
-        for (int i : ans) {
-            System.out.println(i);
-        }
+        //Maximum number in array
+        int arr[]={1,2,3,4};
+        System.out.println(getMaximum(arr));
     }
 }
