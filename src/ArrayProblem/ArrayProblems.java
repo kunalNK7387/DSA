@@ -26,15 +26,24 @@ public class ArrayProblems {
     }
 
     //Maximum Number in arrray
+//    static int getMaximum(int arr[]){
+//        int max=arr[0];
+//        for (int i=0;i< arr.length;i++){
+//            if(arr[i]>max){
+//                max=arr[i];
+//            }
+//        }
+//        return max;
+//    }
+    //By using Math.max()
     static int getMaximum(int arr[]){
         int max=arr[0];
-        for (int i=0;i< arr.length;i++){
-            if(arr[i]>max){
-                max=arr[i];
-            }
+        for(int i=0;i< arr.length;i++){
+            max=Math.max(arr[i],max);
         }
         return max;
     }
+
 
 
     public static void main(String[] args) {
