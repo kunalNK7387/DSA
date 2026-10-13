@@ -37,11 +37,41 @@ public class ArrayProblems {
 //    }
     //By using Math.max()
     static int getMaximum(int arr[]){
-        int max=arr[0];
+        int max=arr[0]; //\(O(1)\)
         for(int i=0;i< arr.length;i++){
             max=Math.max(arr[i],max);
-        }
+        } //\(O(n)\)
         return max;
+    }
+
+    //Return Sum of postive no.s and negetive no.s
+    static int[] getSumPosNeg(int arr[]){
+        int posSum=0;
+        int negSum=0;
+        for (int i=0;i<arr.length;i++){
+            if(arr[i]>0){
+                posSum=posSum+arr[i];
+            }else {
+                negSum=negSum+arr[i];
+            }
+        }//O(n) TC
+        int ans[]={posSum,negSum}; //O(1)
+        return ans;
+    }
+
+    //Return count of the 1 and 0
+    static int[] getZeroOneCount(int arr[]){
+        int zeroCount=0;
+        int oneCount=0;
+        for (int i=0;i< arr.length;i++){
+            if(arr[i]==0){
+                zeroCount++;
+            }else {
+                oneCount++;
+            }
+        }
+        int ans[]={zeroCount,oneCount};
+        return ans;
     }
 
 
@@ -63,7 +93,19 @@ public class ArrayProblems {
 //        System.out.println(ans);
 
         //Maximum number in array
-        int arr[]={1,2,3,4};
-        System.out.println(getMaximum(arr));
+//        int arr[]={1,2,3,4};
+//        System.out.println(getMaximum(arr));
+
+        //Return Sum of postive no.s and negetive no.s
+//        int arr[]={1,-2,5,9,-5,-3};
+//        int ans[]=getSumPosNeg(arr);
+//        System.out.println("positive sum:"+ans[0]);
+//        System.out.println("Negative sum:"+ans[1]);
+
+        //Return count of the 1 and 0
+        int arr[]={1,1,0,1,0,0,1};
+        int ans[]=getZeroOneCount(arr);
+        System.out.println("Count of Zero:"+ans[0]);
+        System.out.println("Count of One:"+ans[1]);
     }
 }
