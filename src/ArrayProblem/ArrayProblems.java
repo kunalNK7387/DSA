@@ -1,5 +1,7 @@
 package ArrayProblem;
 
+import java.util.Arrays;
+
 public class ArrayProblems {
 
     static int[] multiplyBy10(int[] arr) {
@@ -84,6 +86,16 @@ public class ArrayProblems {
         return -1;
     }
 
+    //swap alternate elements of an arr
+
+    static int[] getSwapArray(int[] arr){
+        for (int i=0;i<arr.length; i+= 2){
+            int temp=arr[i];
+            arr[i]=arr[i+1];
+            arr[i+1]=temp;
+        }
+        return arr;
+    }
 
 
     public static void main(String[] args) {
@@ -119,7 +131,12 @@ public class ArrayProblems {
 //        System.out.println("Count of One:"+ans[1]);
 
         //Find the array is sorted or not & print Unsorted element in array
-        int arr[]={1,2,5,4,9};
-        System.out.println(getUnsortedElement(arr));
+//        int arr[]={1,2,5,4,9};
+//        System.out.println(getUnsortedElement(arr));
+
+        //swap alternate elements of an arr
+        int[] arr={1,2,3,4,5,6};
+        int[] result = getSwapArray(arr);
+        System.out.println(Arrays.toString(result));
     }
 }
