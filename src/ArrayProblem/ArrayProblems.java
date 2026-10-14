@@ -74,6 +74,16 @@ public class ArrayProblems {
         return ans;
     }
 
+    //Find the array is sorted or not  print Unsorted element in array
+    static int getUnsortedElement(int arr[]){
+        for (int i=0;i< arr.length;i++){
+            if(arr[i+1]<=arr[i]){
+                return arr[i+1];
+            }
+        }
+        return -1;
+    }
+
 
 
     public static void main(String[] args) {
@@ -103,9 +113,13 @@ public class ArrayProblems {
 //        System.out.println("Negative sum:"+ans[1]);
 
         //Return count of the 1 and 0
-        int arr[]={1,1,0,1,0,0,1};
-        int ans[]=getZeroOneCount(arr);
-        System.out.println("Count of Zero:"+ans[0]);
-        System.out.println("Count of One:"+ans[1]);
+//        int arr[]={1,1,0,1,0,0,1};
+//        int ans[]=getZeroOneCount(arr);
+//        System.out.println("Count of Zero:"+ans[0]);
+//        System.out.println("Count of One:"+ans[1]);
+
+        //Find the array is sorted or not & print Unsorted element in array
+        int arr[]={1,2,5,4,9};
+        System.out.println(getUnsortedElement(arr));
     }
 }
