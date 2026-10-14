@@ -2,6 +2,8 @@ package ArrayProblem;
 
 import java.util.Arrays;
 
+import java.util.Arrays;
+
 public class ArrayProblems {
 
     static int[] multiplyBy10(int[] arr) {
@@ -114,6 +116,20 @@ public class ArrayProblems {
 
     }
 
+    //Print Alternate Extreme element of an array
+    static int[] getAlternateExtreme(int arr[]){;
+        int start = 0;
+        int end = arr.length - 1;
+        while (start<=end){
+            System.out.print(arr[start] + " ");
+            System.out.print(arr[end] + " ");
+
+            start++;
+            end--;
+        }
+        return arr;
+    }
+
 
     public static void main(String[] args) {
 //        int[] arr = {1, 2, 3, 4};
@@ -157,10 +173,16 @@ public class ArrayProblems {
 //        System.out.println(Arrays.toString(result));
 
         // Print array Intersection element
-        int[] arr = {1, 2, 3, 4, 5};
-        int[] brr = {3, 4, 5, 6, 7};
+//        int[] arr = {1, 2, 3, 4, 5};
+//        int[] brr = {3, 4, 5, 6, 7};
+//
+//        int[] ans = getIntersactionElement(arr, brr);
+//        System.out.println(Arrays.toString(ans));
 
-        int[] ans = getIntersactionElement(arr, brr);
+        //Print Alternate Extreme element of an array
+        int [] arr={1,2,3,4,5,6};
+        int[] ans= getAlternateExtreme(arr);
         System.out.println(Arrays.toString(ans));
+
     }
 }
