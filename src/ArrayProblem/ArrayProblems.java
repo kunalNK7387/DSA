@@ -96,6 +96,23 @@ public class ArrayProblems {
         }
         return arr;
     }
+    // Print array Intersection element
+    static int[] getIntersactionElement(int arr[],int brr[] ){
+        int[] temp = new int[Math.min(arr.length, brr.length)];
+        int k = 0;
+
+        for (int i=0;i< arr.length;i++){
+            for (int j=0;j<brr.length;j++){
+                if(arr[i]==brr[j]){
+                    temp[k]=arr[i];
+                    k++;
+                    break;
+                }
+            }
+        }
+        return Arrays.copyOf(temp, k);
+
+    }
 
 
     public static void main(String[] args) {
@@ -135,8 +152,15 @@ public class ArrayProblems {
 //        System.out.println(getUnsortedElement(arr));
 
         //swap alternate elements of an arr
-        int[] arr={1,2,3,4,5,6};
-        int[] result = getSwapArray(arr);
-        System.out.println(Arrays.toString(result));
+//        int[] arr={1,2,3,4,5,6};
+//        int[] result = getSwapArray(arr);
+//        System.out.println(Arrays.toString(result));
+
+        // Print array Intersection element
+        int[] arr = {1, 2, 3, 4, 5};
+        int[] brr = {3, 4, 5, 6, 7};
+
+        int[] ans = getIntersactionElement(arr, brr);
+        System.out.println(Arrays.toString(ans));
     }
 }
