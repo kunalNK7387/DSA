@@ -1,5 +1,8 @@
 package ArrayProblem;
 
+import java.sql.SQLOutput;
+import java.util.HashMap;
+
 public class ArrayManipulationProblems {
 
     // Reverse Array
@@ -51,6 +54,62 @@ public class ArrayManipulationProblems {
         }
     }
 
+    //Find the mode in of an value od array
+    static int findMode(int[] arr) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        int maxCount = 0;
+        int mode = arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+            int count = map.getOrDefault(arr[i], 0) + 1;
+
+            map.put(arr[i], count);
+
+            if (count > maxCount) {
+                maxCount = count;
+                mode = arr[i];
+            }
+        }
+
+        return mode;
+    }
+
+    //Print highet and lowest frqency
+    static int[] getHigestLowestFreq(int[] arr){
+        HashMap<Integer,Integer> map1=new HashMap<>();
+
+        int maxCount=0;
+        int minCount=0;
+        int highest=arr[0];
+        int lowest=arr[0];
+        for(int i=0;i< arr.length;i++){
+            int count =map1.getOrDefault(arr[i],0)+1;
+            map1.put(arr[i],count);
+
+            if(count>maxCount){
+                maxCount=count;
+                highest=arr[i];
+
+            }
+        }
+        for(int i=0;i< arr.length;i++){
+            int count =map1.getOrDefault(arr[i],0)+1;
+            map1.put(arr[i],count);
+
+            if(count<minCount){
+                minCount=count;
+                lowest=arr[i];
+
+            }
+        }
+
+      int ans[]={highest,lowest};
+
+      return ans;
+
+    }
+
     static void main() {
 //        int arr[]={1,2,3,4,5};
 //        reverseArray(arr);
@@ -64,7 +123,18 @@ public class ArrayManipulationProblems {
 //        System.out.println();
 
         //Print Extrem Alternate Element
-        int arr[]={1,2,3,4,5};
-        printAlternate(arr);
+//        int arr[]={1,2,3,4,5};
+//        printAlternate(arr);
+
+        //Print Mode
+//        int[] arr = {1, 2, 3, 2, 4, 2, 5, 3};
+//        int result = findMode(arr);
+//        System.out.println("Mode = " + result);
+
+        //Higest And Lowest Frequency
+        int[] arr = {1, 2, 3, 2, 4, 2, 5, 3};
+        int ans[] = getHigestLowestFreq(arr);
+        System.out.println("highest "+ ans[0]);
+        System.out.println("lowest " + ans[1]);
     }
 }
