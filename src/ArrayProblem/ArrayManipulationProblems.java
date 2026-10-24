@@ -18,8 +18,53 @@ public class ArrayManipulationProblems {
             System.out.println(k);
         }
     }
+
+    //Shift Element by one position
+    static void shiftBy1(int[] arr) {
+        //Step1: Store Last index value in temp
+        int n= arr.length;
+        int temp = arr[n-1];
+        //Step2: shift the all value by 1
+        for(int i=n-1;i>0;i--){
+            arr[i]=arr[i-1];
+        }
+        //Step3: put the temp value in 0th index
+        arr[0]=temp;
+
+    }
+
+    //Print Extrem Alternate Element
+    static void printAlternate(int[] arr ){
+        int n= arr.length;
+        int i=0;
+        int j=n-1; //we use all variables So SC is O(1) constant SC
+        while (i<=j){ //TC O(n)
+            if (i==j){
+                System.out.println(arr[i]);
+                return;
+            }else {
+                System.out.println(arr[i]);
+                i++;
+                System.out.println(arr[j]);
+                j--;
+            }
+        }
+    }
+
     static void main() {
-        int arr[]={1,2,3,4};
-        reverseArray(arr);
+//        int arr[]={1,2,3,4,5};
+//        reverseArray(arr);
+
+        //Shift Element by one position
+//        int arr[]={1,2,3,4,5};
+//        shiftBy1(arr);
+//        for(int a:arr){
+//            System.out.println(a+" ");
+//        }
+//        System.out.println();
+
+        //Print Extrem Alternate Element
+        int arr[]={1,2,3,4,5};
+        printAlternate(arr);
     }
 }
