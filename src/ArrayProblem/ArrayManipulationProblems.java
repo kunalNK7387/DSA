@@ -110,6 +110,56 @@ public class ArrayManipulationProblems {
 
     }
 
+    //Shift Element by the K Element
+    static void shiftElementByK(int[] arr){
+        int n= arr.length;
+        int[] temp=new int[2];
+        temp[0]=arr[n-1];
+        temp[1]=arr[n-2];
+        for(int i=n-1;i>1;i--){
+            arr[i]=arr[i-2];
+        }
+        arr[0]=temp[1];
+        arr[1]=temp[0];
+    }
+    //Union in two array
+    static void unionElement(int[] arr, int[] brr) {
+
+        // Print unique elements from the first array
+        for (int i = 0; i < arr.length; i++) {
+            boolean found = false;
+            for (int k = 0; k < i; k++) {
+                if (arr[i] == arr[k]) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                System.out.println(arr[i]);
+            }
+        }
+        // Print elements from the second array that are not already present
+        for (int j = 0; j < brr.length; j++) {
+            boolean found = false;
+            // Check the first array
+            for (int i = 0; i < arr.length; i++) {
+                if (brr[j] == arr[i]) {
+                    found = true;
+                    break;
+                }
+            }
+            // Check previous elements of the second array
+            for (int k = 0; k < j && !found; k++) {
+                if (brr[j] == brr[k]) {
+                    found = true;
+                }
+            }
+            if (!found) {
+                System.out.println(brr[j]);
+            }
+        }
+    }
+
     static void main() {
 //        int arr[]={1,2,3,4,5};
 //        reverseArray(arr);
@@ -132,9 +182,24 @@ public class ArrayManipulationProblems {
 //        System.out.println("Mode = " + result);
 
         // Print Higest And Lowest Frequency
-        int[] arr = {1, 2, 3, 2, 4, 2, 5, 3};
-        int ans[] = getHigestLowestFreq(arr);
-        System.out.println("highest "+ ans[0]);
-        System.out.println("lowest " + ans[1]);
+//        int[] arr = {1, 2, 3, 2, 4, 2, 5, 3};
+//        int ans[] = getHigestLowestFreq(arr);
+//        System.out.println("highest "+ ans[0]);
+//        System.out.println("lowest " + ans[1]);
+
+        //Shift Element by one position
+//        int arr[]={1,2,3,4,5,6};
+//        shiftElementByK(arr);
+//        for(int a:arr){
+//            System.out.println(a+" ");
+//        }
+//        System.out.println();
+
+        //Get Union
+        int[] arr={1,2,3,4};
+        int[] brr={6,1,2,7};
+
+        unionElement(arr, brr);
+
     }
 }
