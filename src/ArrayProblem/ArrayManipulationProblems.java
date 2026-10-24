@@ -131,7 +131,7 @@ public class ArrayManipulationProblems {
 //        int result = findMode(arr);
 //        System.out.println("Mode = " + result);
 
-        // print Higest And Lowest Frequency
+        // Print Higest And Lowest Frequency
         int[] arr = {1, 2, 3, 2, 4, 2, 5, 3};
         int ans[] = getHigestLowestFreq(arr);
         System.out.println("highest "+ ans[0]);
