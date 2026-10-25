@@ -188,6 +188,18 @@ public class ArrayManipulationProblems {
 
     }
 
+    //Find the unique
+        public int singleNumber(int[] nums) {
+            int xorSum = 0;
+
+            for (int n : nums) {
+                xorSum = xorSum ^ n;
+            }
+
+            return xorSum;
+        }
+
+
     static void main() {
 //        int arr[]={1,2,3,4,5};
 //        reverseArray(arr);
