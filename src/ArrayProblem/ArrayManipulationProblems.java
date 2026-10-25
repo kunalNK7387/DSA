@@ -1,6 +1,7 @@
 package ArrayProblem;
 
 import java.sql.SQLOutput;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class ArrayManipulationProblems {
@@ -160,6 +161,33 @@ public class ArrayManipulationProblems {
         }
     }
 
+    //Sort The array by the 0's and 1's left side all zero and right side all one
+    static int[] sortArray(int[] arr){
+        int n= arr.length;
+        int i=0;
+        int j=n-1;
+
+        while (i<j){
+            if(arr[i]==1 && arr[j]==0){
+                //swap taking basic swap i dont need of 3 step swap
+                //int temp=arr[i];
+                arr[i]=0;
+                arr[j]=1;
+
+            }
+            if(arr[i]==0){
+                // move i forward
+                i++;
+            }
+            if(arr[j]==1){
+                //move j backword decrement
+                j--;
+            }
+        }
+        return arr;
+
+    }
+
     static void main() {
 //        int arr[]={1,2,3,4,5};
 //        reverseArray(arr);
@@ -196,10 +224,14 @@ public class ArrayManipulationProblems {
 //        System.out.println();
 
         //Get Union
-        int[] arr={1,2,3,4};
-        int[] brr={6,1,2,7};
+//        int[] arr={1,2,3,4};
+//        int[] brr={6,1,2,7};
+//
+//        unionElement(arr, brr);
 
-        unionElement(arr, brr);
-
+        //short 1 and 0
+        int [] arr={1,0,1,0,1,1};
+        sortArray(arr);
+        System.out.println(Arrays.toString(arr) );
     }
 }
