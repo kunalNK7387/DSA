@@ -199,6 +199,43 @@ public class ArrayManipulationProblems {
             return xorSum;
         }
 
+        //sort the 0's ,1's And 2's
+
+            public void sortColors(int[] nums) {
+                int n = nums.length;
+                int i=0;
+
+                int count0 = 0;
+                int count1 = 0;
+                int count2 = 0;
+
+                for(int num:nums){
+                    if(num==0){
+                        count0++;
+                    }
+                    if(num==1){
+                        count1++;
+                    }
+                    if(num==2){
+                        count2++;
+                    }
+                }
+
+                for(int k=0;k<count0;k++){
+                    nums[i]=0;
+                    i++;
+                }
+                for(int k=0;k<count1;k++){
+                    nums[i]=1;
+                    i++;
+                }
+                for(int k=0;k<count2;k++){
+                    nums[i]=2;
+                    i++;
+                }
+            }
+
+
 
     static void main() {
 //        int arr[]={1,2,3,4,5};
