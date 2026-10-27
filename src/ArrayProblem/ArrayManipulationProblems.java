@@ -250,8 +250,6 @@ public class ArrayManipulationProblems {
                 }
 
                 //3 Sum
-
-
         public List<List<Integer>> threeSum(int[] nums) {
             Set<List<Integer>> result=new HashSet<>();
             int n= nums.length;
@@ -273,8 +271,24 @@ public class ArrayManipulationProblems {
             return new ArrayList<>(result);
         }
 
-
-
+        //Remove duplicate value from array
+        class Solution {
+            public int removeDuplicates(int[] nums) {
+                int i=0;
+                int j=1;
+                int n=nums.length;
+                while(j<n){
+                    if(nums[i]==nums[j]){
+                        j++;
+                    }else {
+                        i++;
+                        nums[i]=nums[j];
+                        j++;
+                    }
+                }
+                return i+1;
+            }
+        }
 
 
     static void main() {
