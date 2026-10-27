@@ -290,6 +290,21 @@ public class ArrayManipulationProblems {
             }
         }
 
+        //Find the First duplicate element
+        public int findFirstRepedatedElement(int[] arr){
+            HashMap<Integer,Integer> freq=new HashMap<>();
+            for(int num:arr){
+                freq.put(num,freq.getOrDefault(num,0)+1);
+            }
+            for(int i:arr){
+                if(freq.get(i)>1){
+                    return i;
+
+                }
+            }
+            return -1;
+        }
+
 
     static void main() {
 //        int arr[]={1,2,3,4,5};
