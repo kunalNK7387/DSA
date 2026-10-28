@@ -305,6 +305,51 @@ public class ArrayManipulationProblems {
             return -1;
         }
 
+        //Find the Pivot index
+
+            public int pivotIndex(int[] nums) {
+                int n = nums.length;
+                int[] leftSum = new int[n];
+                int[] rightSum = new int[n];
+                leftSum[0] = 0;
+                for (int i = 1; i < n; i++) {
+                    leftSum[i] = leftSum[i - 1] + nums[i - 1];
+                }
+                rightSum[n - 1] = 0;
+                for (int i = n - 2; i >= 0; i--) {
+                    rightSum[i] = rightSum[i + 1] + nums[i + 1];
+                }
+                for (int i = 0; i < n; i++) {
+                    if (leftSum[i] == rightSum[i]) {
+                        return i;
+                    }
+                }
+                return -1;
+            }
+
+            //missing elements from an array  with Duplicates
+                public List<Integer> findDisappearedNumbers(int[] nums) {
+                    List<Integer> ans=new ArrayList<>();
+
+                    int n=nums.length;
+                    for(int index=0;index<n;index++){
+                        int value =Math.abs(nums[index]);
+                        int position=value-1;
+
+                        if(nums[position]>0){
+                            nums[position]= -nums[position];
+                        }
+                    }
+                    for(int i=0;i<n;i++){
+                        if(nums[i]>0){
+                            int valueAtThisIndex=i+1;
+                            ans.add(valueAtThisIndex);
+                        }
+                    }
+                    return ans;
+                }
+
+
 
     static void main() {
 //        int arr[]={1,2,3,4,5};
