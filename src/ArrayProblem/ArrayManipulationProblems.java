@@ -349,6 +349,26 @@ public class ArrayManipulationProblems {
                     return ans;
                 }
 
+                // Maximum Subarray (Kadane’s Algorithm) used to find the maximum sum of a contiguous subarray
+
+                    public int maxSubArray(int[] nums) {
+                        int sum=0;
+                        int maxSum=Integer.MIN_VALUE;
+
+                        for(int i=0;i<nums.length;i++){
+                            //Step 1:Create Sum
+                            sum=sum+nums[i];
+                            //Step 2:Update the maxSum
+                            maxSum=Math.max(maxSum,sum);
+                            //Step 3:Check the sum for negative value
+                            if(sum<0){
+                                sum=0;
+                            }
+                        }
+                        //return max value
+                        return maxSum;
+                    }
+
 
 
     static void main() {
