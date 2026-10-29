@@ -384,6 +384,22 @@ public class ArrayManipulationProblems {
                             return maxSum;
     }
 
+    //Print the sum of each row in 2d array
+    public List<Integer> rowSum(int[][] arr){
+        List<Integer> result=new ArrayList<>();
+         int n=arr.length;
+         int m=arr[0].length;
+         for (int row=0;row<m;row++){
+             int sum=0;
+             for (int col=0;col<n;col++) {
+                 int value=arr[row][col];
+                 sum=sum+value;
+             }
+             result.add(sum);
+         }
+         return result;
+    }
+
 
 
 
