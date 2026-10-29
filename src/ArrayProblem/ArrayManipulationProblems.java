@@ -188,7 +188,7 @@ public class ArrayManipulationProblems {
     }
 
     //Find the unique
-        public int singleNumber(int[] nums) {
+    public int singleNumber(int[] nums) {
             int xorSum = 0;
 
             for (int n : nums) {
@@ -200,7 +200,7 @@ public class ArrayManipulationProblems {
 
         //sort the 0's ,1's And 2's
 
-            public void sortColors(int[] nums) {
+    public void sortColors(int[] nums) {
                 int n = nums.length;
                 int i=0;
 
@@ -247,10 +247,10 @@ public class ArrayManipulationProblems {
                     }
                     int ans[]={};
                     return ans;
-                }
+    }
 
-                //3 Sum
-        public List<List<Integer>> threeSum(int[] nums) {
+    //3 Sum
+    public List<List<Integer>> threeSum(int[] nums) {
             Set<List<Integer>> result=new HashSet<>();
             int n= nums.length;
             int target=0;
@@ -269,11 +269,10 @@ public class ArrayManipulationProblems {
                 }
             }
             return new ArrayList<>(result);
-        }
+    }
+    //Remove duplicate value from array
 
-        //Remove duplicate value from array
-        class Solution {
-            public int removeDuplicates(int[] nums) {
+    public int removeDuplicates(int[] nums) {
                 int i=0;
                 int j=1;
                 int n=nums.length;
@@ -287,11 +286,11 @@ public class ArrayManipulationProblems {
                     }
                 }
                 return i+1;
-            }
-        }
+    }
 
-        //Find the First duplicate element
-        public int findFirstRepedatedElement(int[] arr){
+
+    //Find the First duplicate element
+    public int findFirstRepedatedElement(int[] arr){
             HashMap<Integer,Integer> freq=new HashMap<>();
             for(int num:arr){
                 freq.put(num,freq.getOrDefault(num,0)+1);
@@ -303,11 +302,10 @@ public class ArrayManipulationProblems {
                 }
             }
             return -1;
-        }
+    }
 
-        //Find the Pivot index
-
-            public int pivotIndex(int[] nums) {
+    //Find the Pivot index
+    public int pivotIndex(int[] nums) {
                 int n = nums.length;
                 int[] leftSum = new int[n];
                 int[] rightSum = new int[n];
@@ -325,10 +323,10 @@ public class ArrayManipulationProblems {
                     }
                 }
                 return -1;
-            }
+    }
 
-            //missing elements from an array  with Duplicates
-                public List<Integer> findDisappearedNumbers(int[] nums) {
+    //missing elements from an array  with Duplicates
+    public List<Integer> findDisappearedNumbers(int[] nums) {
                     List<Integer> ans=new ArrayList<>();
 
                     int n=nums.length;
@@ -347,11 +345,10 @@ public class ArrayManipulationProblems {
                         }
                     }
                     return ans;
-                }
+    }
 
-                // Maximum Subarray (Kadane’s Algorithm) used to find the maximum sum of a contiguous subarray
-
-                    public int maxSubArray(int[] nums) {
+    // Maximum Subarray (Kadane’s Algorithm) used to find the maximum sum of a contiguous subarray
+    public int maxSubArray(int[] nums) {
                         int sum=0;
                         int maxSum=Integer.MIN_VALUE;
 
@@ -367,7 +364,26 @@ public class ArrayManipulationProblems {
                         }
                         //return max value
                         return maxSum;
-                    }
+    }
+
+    //Richest Customer Wealth  calculate each row's sum and update maxSum
+    public int maximumWealth(int[][] arr) {
+                            int m= arr.length;
+                            int n=arr[0].length;
+                            int maxSum=0;
+
+                            for(int row=0;row<m;row++){
+                                int sum=0;
+                                for(int col=0;col<n;col++){
+                                    int value=arr[row][col];
+                                    sum=sum+value;
+                                }
+                                maxSum=Math.max(maxSum,sum);
+
+                            }
+                            return maxSum;
+    }
+
 
 
 
