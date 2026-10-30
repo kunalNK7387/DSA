@@ -400,6 +400,26 @@ public class ArrayManipulationProblems {
          return result;
     }
 
+    //Wave Print A Matrix
+    public List<Integer> wavePrintMatrix(int[][] matrix,int m,int n){
+        List<Integer>   result=new ArrayList<>();
+        //Moving Columnwise
+        for(int col=0;col<n;col++ ){
+            if ((col & 1)==1) {
+                //odd bottom to top
+                for (int row=m-1;row>=0;row--) {
+                    result.add(matrix[row][col]);
+                }
+            }else {
+                //even top to bottom
+                for (int row=0;row<m;row++){
+                    result.add(matrix[row][col]);
+                }
+            }
+        }
+        return result;
+    }
+
 
 
 
