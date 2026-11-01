@@ -434,6 +434,22 @@ public class ArrayManipulationProblems {
         }
     }
 
+    //Selection sorting
+    static void selectionSort(int[] arr){
+        int n= arr.length;
+        for (int i=0;i<n-1;i++){
+            int minIndex=i;
+            for (int j=i+1;j<n;j++){
+                if(arr[j]<arr[minIndex]){
+                    minIndex=j;
+                }
+            }
+            int temp=arr[i];
+            arr[i]=arr[minIndex];
+            arr[minIndex]=temp;
+        }
+    }
+
 
 
 
@@ -483,9 +499,17 @@ public class ArrayManipulationProblems {
 //        sortArray(arr);
 //        System.out.println(Arrays.toString(arr) );
 
-        //Bubble Sorting
-        int arr[]={6,5,1,2};
-        bubbleSort(arr);
+       //Bubble Sorting
+//        int arr[]={6,5,1,2};
+//        bubbleSort(arr);
+//        System.out.println("print the array: ");
+//        for (int value:arr){
+//            System.out.print(value + " ");
+//        }
+
+        //Selection Sorting
+        int arr[]={6,5,1,2,4};
+        selectionSort(arr);
         System.out.println("print the array: ");
         for (int value:arr){
             System.out.print(value + " ");
