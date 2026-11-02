@@ -450,6 +450,21 @@ public class ArrayManipulationProblems {
         }
     }
 
+    //Insertion Sort
+    static void insertionSort(int arr[]){
+        int n= arr.length;
+        for (int i=0;i<n;i++){
+            int prev=i-1;
+            int currValue=arr[i];
+
+            while (prev>=0 &&  currValue<arr[prev]){
+                arr[prev+1]=arr[prev];
+                prev--;
+            }
+            arr[prev+1]=currValue;
+        }
+    }
+
 
 
 
@@ -508,9 +523,17 @@ public class ArrayManipulationProblems {
 //        }
 
         //Selection Sorting
+//        int arr[]={6,5,1,2,4};
+//        selectionSort(arr);
+//        System.out.println("print the array: ");
+//        for (int value:arr){
+//            System.out.print(value + " ");
+//        }
+
+        //Insertion Sorting
         int arr[]={6,5,1,2,4};
-        selectionSort(arr);
-        System.out.println("print the array: ");
+        insertionSort(arr);
+        System.out.println("print the array i: ");
         for (int value:arr){
             System.out.print(value + " ");
         }
