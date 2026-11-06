@@ -38,7 +38,7 @@ public class BinarySearch {
         }
         return ans;
     }
-    int countFreq(int[] arr, int target) {
+   static int countFreq(int[] arr, int target) {
         // code here
         int lbIndex=getLowerBound(arr,target);
         int ubIndex=getUpperBound(arr,target);
@@ -46,8 +46,9 @@ public class BinarySearch {
         return ans;
 
     }
-}
+
     static void main(){
+          //lowerBound
 //        int arr[]={10,20,30,30,30,30,30,40,50};
 //        int target=30;
 //        int ans=getLowerBound(arr,target);
@@ -58,5 +59,11 @@ public class BinarySearch {
 //        int target=25;
 //        int ans=getUpperBound(arr,target);
 //        System.out.println("Ans: "+ans);
+
+        //Total Number of Occurenace
+        int arr[]={10,20,30,30,30,30,30,40,50};
+        int target=30;
+        int ans= countFreq(arr,target);
+        System.out.println("Ans: "+ans);
     }
 }
