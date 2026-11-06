@@ -1,11 +1,12 @@
 package ArrayProblem;
 
 public class BinarySearch {
+
     static int getLowerBound(int[] arr,int target){
         int n=arr.length;
         int s=0;
         int e=n-1;
-        int ans=-1;
+        int ans=n;
         while (s<=e){
             int mid=s+(e-s)/2;
             if (arr[mid]>=target){
@@ -24,7 +25,7 @@ public class BinarySearch {
         int n= arr.length;
         int s=0;
         int e=n-1;
-        int ans=-1;
+        int ans=n;
         while (s<=e){
             int mid=s+(e-s)/2;
             if (arr[mid]<=target){
@@ -37,6 +38,15 @@ public class BinarySearch {
         }
         return ans;
     }
+    int countFreq(int[] arr, int target) {
+        // code here
+        int lbIndex=getLowerBound(arr,target);
+        int ubIndex=getUpperBound(arr,target);
+        int ans=ubIndex-lbIndex;
+        return ans;
+
+    }
+}
     static void main(){
 //        int arr[]={10,20,30,30,30,30,30,40,50};
 //        int target=30;
@@ -44,9 +54,9 @@ public class BinarySearch {
 //        System.out.println("Ans: "+ans);
 
         //UpperBound
-        int arr[]={10,20,30,30,30,30,30,40,50};
-        int target=25;
-        int ans=getUpperBound(arr,target);
-        System.out.println("Ans: "+ans);
+//        int arr[]={10,20,30,30,30,30,30,40,50};
+//        int target=25;
+//        int ans=getUpperBound(arr,target);
+//        System.out.println("Ans: "+ans);
     }
 }
