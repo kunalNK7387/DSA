@@ -59,7 +59,7 @@ public class BinarySearch {
         //binary searc logic
         while (s<=e){
             int mid=s+(e-s)/2;
-            if(arr[mid]<arr[n-1]){
+            if(arr[mid]<=arr[n-1]){
                 //we are on L2 Line
                 //answer is on L1 line
                 //move to left
