@@ -47,6 +47,31 @@ public class BinarySearch {
 
     }
 
+    //Find the Pivot index of a Roadated array
+    static int findPivotIndex(int[] arr){
+        int n= arr.length;
+        int s=0;
+        int e=n-1;
+        int ans=-1;
+        if(arr[s]<arr[e]){
+            return -1;
+        }
+        //binary searc logic
+        while (s<=e){
+            int mid=s+(e-s)/2;
+            if(arr[mid]<arr[n-1]){
+                //we are on L2 Line
+                //answer is on L1 line
+                //move to left
+                e=mid-1;
+            }else {
+                ans=mid;
+                s=mid+1;
+            }
+        }
+        return ans;
+    }
+
     static void main(){
           //lowerBound
 //        int arr[]={10,20,30,30,30,30,30,40,50};
@@ -61,9 +86,14 @@ public class BinarySearch {
 //        System.out.println("Ans: "+ans);
 
         //Total Number of Occurenace
-        int arr[]={10,20,30,30,30,30,30,40,50};
-        int target=30;
-        int ans= countFreq(arr,target);
+//        int arr[]={10,20,30,30,30,30,30,40,50};
+//        int target=30;
+//        int ans= countFreq(arr,target);
+//        System.out.println("Ans: "+ans);
+
+        //Find the Pivot index of a Roadated array
+        int arr[]={4,5,6,7,0,1,2};
+        int ans= findPivotIndex(arr);
         System.out.println("Ans: "+ans);
     }
 }
